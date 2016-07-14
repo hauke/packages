@@ -1,0 +1,11 @@
+--- a/testcases/network/rpc/basic_tests/rpc01/Makefile
++++ b/testcases/network/rpc/basic_tests/rpc01/Makefile
+@@ -29,7 +29,7 @@ SUBDIRS			:= datafiles
+ 
+ CPPFLAGS		+= -I$(abs_srcdir)/lib
+ LDFLAGS			+= -L$(abs_builddir)/lib
+-LDLIBS			+= -lrpc01
++LDLIBS			+= -lrpc01 -lrpc
+ 
+ LIBDIR			:= lib
+ LIB			:= $(LIBDIR)/librpc01.a

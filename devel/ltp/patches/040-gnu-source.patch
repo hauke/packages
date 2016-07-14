@@ -1,0 +1,23 @@
+--- a/testcases/misc/crash/crash01.c
++++ b/testcases/misc/crash/crash01.c
+@@ -50,6 +50,7 @@ benchmark.
+ 
+ */
+ 
++#define _GNU_SOURCE
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+--- a/testcases/network/multicast/mc_gethost/mc_gethost.c
++++ b/testcases/network/multicast/mc_gethost/mc_gethost.c
+@@ -4,8 +4,10 @@
+ 
+ /* DECWRL Header: host.c,v 1.1 89/04/05 15:41:12 vixie Locked $ */
+ 
++#define _GNU_SOURCE
+ #include <sys/param.h>
+ #include <sys/socket.h>
++#include <sys/types.h>
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <arpa/nameser.h>
