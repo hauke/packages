@@ -1,0 +1,20 @@
+--- a/stress-ng.h
++++ b/stress-ng.h
+@@ -524,7 +524,7 @@
+ #include <linux/if_tun.h>
+ #endif
+ 
+-#if defined(HAVE_LINUX_IO_URING_H)
++#if defined(HAVE_LINUX_IO_URING_H) && !defined(FSCONFIG_CMD_CREATE)
+ #include <linux/io_uring.h>
+ #endif
+ 
+@@ -536,7 +536,7 @@
+ #include <linux/filter.h>
+ #endif
+ 
+-#if defined(HAVE_LINUX_FS_H)
++#if defined(HAVE_LINUX_FS_H) && !defined(FSCONFIG_CMD_CREATE)
+ #include <linux/fs.h>
+ #endif
+ 
