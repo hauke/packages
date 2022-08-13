@@ -1,0 +1,10 @@
+--- a/src/hd/hd.c
++++ b/src/hd/hd.c
+@@ -23,7 +23,6 @@
+ #include <linux/hdreg.h>
+ #define _LINUX_AUDIT_H_
+ #define _LINUX_PRIO_TREE_H
+-#include <linux/fs.h>
+ 
+ /**
+  * @defgroup libhdBUSint Bus scanning code
