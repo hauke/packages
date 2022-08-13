@@ -1,0 +1,21 @@
+--- a/common/device-utils.c
++++ b/common/device-utils.c
+@@ -26,7 +26,6 @@
+ #include <dirent.h>
+ #include <blkid/blkid.h>
+ #include <linux/limits.h>
+-#include <linux/fs.h>
+ #include <limits.h>
+ #include "kernel-lib/sizes.h"
+ #include "kernel-shared/disk-io.h"
+@@ -42,6 +41,10 @@
+ #define BLKDISCARD	_IO(0x12,119)
+ #endif
+ 
++#ifndef FIGETBSZ
++#define FIGETBSZ   _IO(0x00,2)	/* get the block size used for bmap */
++#endif
++
+ /*
+  * Discard the given range in one go
+  */
