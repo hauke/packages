@@ -1,0 +1,11 @@
+--- a/src/libcrun/linux.c
++++ b/src/libcrun/linux.c
+@@ -26,7 +26,7 @@
+ #include <fcntl.h>
+ #include <unistd.h>
+ #include <sys/mount.h>
+-#ifdef HAVE_FSCONFIG_CMD_CREATE
++#if defined(HAVE_FSCONFIG_CMD_CREATE) && !defined(FSCONFIG_CMD_CREATE)
+ #  include <linux/mount.h>
+ #endif
+ #include <sys/syscall.h>
